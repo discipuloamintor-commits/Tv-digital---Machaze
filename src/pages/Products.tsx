@@ -78,7 +78,8 @@ export default function Products() {
       </div>
 
       <div className="bg-[#161616] rounded-lg border border-[#3E3E3E] overflow-hidden">
-        <table className="w-full text-left border-collapse">
+        <div className="overflow-x-auto">
+          <table className="w-full text-left border-collapse min-w-[600px]">
           <thead>
             <tr className="bg-[#1c1c1c] border-b border-[#3E3E3E]">
               <th className="px-6 py-4 text-sm font-medium text-[#8B8B8B]">Código</th>
@@ -113,6 +114,7 @@ export default function Products() {
             )}
           </tbody>
         </table>
+        </div>
       </div>
 
       {/* Modal Novo Produto */}

@@ -163,8 +163,8 @@ export default function POS() {
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 screen-only">
         {/* Products List */}
         <div className="lg:col-span-2 flex flex-col">
-          <div className="flex justify-between items-center mb-6">
-             <div className="flex items-center space-x-4">
+          <div className="flex flex-col space-y-4 md:space-y-0 md:flex-row md:justify-between md:items-center mb-6">
+             <div className="flex items-center space-x-4 w-full md:w-auto justify-between md:justify-start">
                <h2 className="text-2xl font-semibold text-[#EDEDED]">Ponto de Venda</h2>
                
                {/* Printer Status Widget */}
@@ -182,7 +182,7 @@ export default function POS() {
                  )}
                </button>
              </div>
-             <div className="flex bg-[#1c1c1c] border border-[#3E3E3E] rounded-md p-1">
+             <div className="flex bg-[#1c1c1c] border border-[#3E3E3E] rounded-md p-1 w-full md:w-auto justify-center">
                 <button 
                   onClick={() => setSaleType('avulsa')}
                   className={`px-4 py-1.5 rounded-md text-sm font-medium transition-colors ${saleType === 'avulsa' ? 'bg-[#24B47E] text-white' : 'text-[#8B8B8B] hover:text-[#EDEDED]'}`}
@@ -198,7 +198,7 @@ export default function POS() {
              </div>
           </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-4 overflow-auto h-[calc(100vh-12rem)] pb-4 pr-2">
+          <div className="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-4 overflow-auto h-[55vh] md:h-[calc(100vh-12rem)] pb-4 pr-2">
             {products.map(product => (
               <div 
                 key={product.id} 

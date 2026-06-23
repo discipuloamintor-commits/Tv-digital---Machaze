@@ -68,7 +68,8 @@ export default function Customers() {
       </div>
 
       <div className="bg-[#161616] rounded-lg border border-[#3E3E3E] overflow-hidden">
-        <table className="w-full text-left border-collapse">
+        <div className="overflow-x-auto">
+          <table className="w-full text-left border-collapse min-w-[600px]">
           <thead>
             <tr className="bg-[#1c1c1c] border-b border-[#3E3E3E]">
               <th className="px-6 py-4 text-sm font-medium text-[#8B8B8B]">Nome</th>
@@ -101,6 +102,7 @@ export default function Customers() {
             )}
           </tbody>
         </table>
+        </div>
       </div>
 
       {/* Modal Novo Cliente */}
@@ -159,8 +161,8 @@ export default function Customers() {
               </button>
             </div>
             
-            <div className="flex-1 overflow-auto p-4">
-              <table className="w-full text-left border-collapse text-sm">
+            <div className="flex-1 overflow-x-auto p-4">
+              <table className="w-full text-left border-collapse text-sm min-w-[500px]">
                 <thead>
                   <tr className="border-b border-[#3E3E3E]">
                     <th className="pb-2 text-[#8B8B8B]">Data</th>
